@@ -46,7 +46,7 @@ def create_sidebar(df):
     
             countries = df['country'].unique().tolist()
             countries.sort()
-            country_select = st.multiselect('Escolha de quais países deseja visualizar os restaurantes', countries, countries)
+            country_select = st.multiselect('Escolha de quais países deseja visualizar os restaurantes', countries, ['Brazil', 'England', 'Qatar', 'South Africa', 'Canada', 'Australia'])
 
     return country_select
     
