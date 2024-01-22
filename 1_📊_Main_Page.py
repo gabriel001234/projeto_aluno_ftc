@@ -48,6 +48,10 @@ def create_sidebar(df):
             countries.sort()
             country_select = st.multiselect('Escolha de quais países deseja visualizar os restaurantes', countries, ['Brazil', 'England', 'Qatar', 'South Africa', 'Canada', 'Australia'])
 
+            st.write('### Dados tratados')
+            csv = to_csv(df)
+            download = st.download_button(label='Download', data=csv, file_name='zomato.csv', mime='text/csv')
+
     return country_select
     
 
